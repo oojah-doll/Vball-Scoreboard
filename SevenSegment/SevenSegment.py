@@ -2,8 +2,6 @@ from dataclasses import dataclass, field
 from enum import Enum, auto
 from typing import Dict, List
 
-
-# -------------------------
 # Segment identity (Enum)
 # -------------------------
 class SegmentName(Enum):
@@ -15,7 +13,6 @@ class SegmentName(Enum):
     TopLeft = auto()
     Middle = auto()
 
-# -------------------------
 # Data model
 # -------------------------
 # one of 7 segments in a display digit
@@ -38,7 +35,6 @@ class Display:
     digits: List[Digit] = field(default_factory=list)
 
 
-# -------------------------
 # Public Clock API
 # -------------------------
 def ClearDisplay(display: Display) -> None:
@@ -47,7 +43,6 @@ def ClearDisplay(display: Display) -> None:
         for segment in digit.segments.values():
             segment.isOn = False
 
-# -------------------------
 # Public ASCII Debug API
 # -------------------------
 def MakeDigitASCII(digit: Digit) -> str:
@@ -98,7 +93,6 @@ def CombineDigitASCIIStrings(digit_ascii_list: List[str], gapSpaces: int = 2) ->
     # then add a new line between each of our rows and we are good to go.
     return "\n".join(combined_rows)
 
-# -------------------------
 # Internal helpers - ASCII
 # -------------------------
 def _DrawHorizontalSegment(isOn: bool) -> str:
@@ -112,7 +106,6 @@ def _DrawVerticalSegment(is_left_on: bool, is_right_on: bool) -> str:
     return f"{left_edge}" + "     " + f"{right_edge}"
 
 
-# -------------------------
 # Testing in Main
 # -------------------------
 if __name__ == "__main__":
