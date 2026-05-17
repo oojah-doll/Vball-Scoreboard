@@ -1,9 +1,9 @@
-"""Manual ASCII demo for the seven-segment package.
+"""Manual ASCII demo for the scoreboard package.
 
 Examples:
-    python -m SevenSegment.ascii_demo
-    python -m SevenSegment.ascii_demo 1234
-    python -m SevenSegment.ascii_demo "8-1 "
+    python -m vball_scoreboard.ascii_demo
+    python -m vball_scoreboard.ascii_demo 1234
+    python -m vball_scoreboard.ascii_demo "8-1 "
 """
 
 import sys
@@ -15,9 +15,9 @@ DEFAULT_SYMBOLS = "1234"
 
 
 def _print_usage() -> None:
-    print("Usage: python -m SevenSegment.ascii_demo [symbols]")
-    print("Example: python -m SevenSegment.ascii_demo 1234")
-    print('Example: python -m SevenSegment.ascii_demo "8-1 "')
+    print("Usage: python -m vball_scoreboard.ascii_demo [symbols]")
+    print("Example: python -m vball_scoreboard.ascii_demo 1234")
+    print('Example: python -m vball_scoreboard.ascii_demo "8-1 "')
 
 
 def main() -> int:

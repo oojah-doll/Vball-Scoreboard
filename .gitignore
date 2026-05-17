@@ -1,0 +1,38 @@
+.agents/
+Docs/
+AGENTS.md
+CONTEXT.md
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Packaging/build artifacts
+*.egg-info/
+build/
+dist/
+
+# Test and analysis caches/reports
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments / local Python version files
+.venv/
+venv/
+.python-version
+
+# Editor / OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# CircuitPython-generated board metadata
+boot_out.txt

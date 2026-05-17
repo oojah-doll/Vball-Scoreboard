@@ -1,15 +1,15 @@
 import unittest
 
-import SevenSegment.segment_types as segment_types
-from SevenSegment.segment_types import DigitState, DisplayState, clear_digit
-from SevenSegment.glyphs import (
+import vball_scoreboard.segment_types as segment_types
+from vball_scoreboard.segment_types import DigitState, DisplayState, clear_digit
+from vball_scoreboard.glyphs import (
     apply_glyph,
     create_display_for_symbols,
     create_digit_for_symbol,
     supported_symbols,
     write_symbols,
 )
-from SevenSegment.ascii_renderer import render_digit_ascii, render_display_ascii
+from vball_scoreboard.ascii_renderer import render_digit_ascii, render_display_ascii
 
 
 class SevenSegmentGlyphTests(unittest.TestCase):
