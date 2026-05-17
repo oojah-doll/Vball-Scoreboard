@@ -12,6 +12,8 @@ from .segment_types import (
     SEGMENT_TOP_RIGHT,
 )
 
+# ASCII Layout Constants
+# ---------------------------------------------------------------------------
 ASCII_DIGIT_HEIGHT = 7
 
 

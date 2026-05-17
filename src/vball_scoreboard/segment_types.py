@@ -4,6 +4,8 @@ This module is intentionally small and explicit so it stays easy to run on
 both desktop Python and CircuitPython.
 """
 
+# Segment Constants
+# ---------------------------------------------------------------------------
 SEGMENT_TOP = 0
 SEGMENT_TOP_RIGHT = 1
 SEGMENT_BOTTOM_RIGHT = 2

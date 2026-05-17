@@ -11,6 +11,8 @@ import sys
 from .ascii_renderer import render_display_ascii
 from .glyphs import create_display_for_symbols, supported_symbols
 
+# Demo Constants
+# ---------------------------------------------------------------------------
 DEFAULT_SYMBOLS = "1234"
 
 

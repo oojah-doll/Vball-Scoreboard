@@ -20,9 +20,11 @@ from .scoreboard_display_driver import (
     create_calibration_display,
 )
 
+# Runtime Constants
+# ---------------------------------------------------------------------------
 MODE_CYCLE: int = 0
 MODE_CALIBRATION: int = 1
-RUN_MODE: int = MODE_CYCLE
+RUN_MODE: int = MODE_CALIBRATION
 
 DIGIT_COUNT: int = 4
 PIXEL_COUNT: int = 70

@@ -12,6 +12,8 @@ from .segment_types import (
     SEGMENT_TOP_RIGHT,
 )
 
+# Glyph Constants
+# ---------------------------------------------------------------------------
 GLYPH_SEGMENTS = {
     " ": (),
     "-": (SEGMENT_MIDDLE,),
