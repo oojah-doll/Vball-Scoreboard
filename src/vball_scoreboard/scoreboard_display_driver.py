@@ -38,6 +38,8 @@ DIGIT_SEGMENT_PIXEL_MAP: dict[SegmentKey, tuple[int, ...]] = {
 }
 
 
+# Driver
+# ---------------------------------------------------------------------------
 class ScoreboardDisplayDriver:
     """Applies DisplayState to a NeoPixel-like pixel buffer."""
 
@@ -102,6 +104,8 @@ class ScoreboardDisplayDriver:
         print("WARN: pixel index out of range: %d" % pixel_index)
 
 
+# Calibration Builders
+# ---------------------------------------------------------------------------
 def build_calibration_steps(digit_count: int) -> tuple[SegmentKey, ...]:
     if digit_count < 0:
         raise ValueError("digit_count must be non-negative")

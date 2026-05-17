@@ -14,12 +14,8 @@ from .glyphs import create_display_for_symbols, supported_symbols
 DEFAULT_SYMBOLS = "1234"
 
 
-def _print_usage() -> None:
-    print("Usage: python -m vball_scoreboard.ascii_demo [symbols]")
-    print("Example: python -m vball_scoreboard.ascii_demo 1234")
-    print('Example: python -m vball_scoreboard.ascii_demo "8-1 "')
-
-
+# CLI
+# ---------------------------------------------------------------------------
 def main() -> int:
     symbols = DEFAULT_SYMBOLS
     if len(sys.argv) >= 2:
@@ -36,6 +32,14 @@ def main() -> int:
     print("Symbols:", repr(symbols))
     print(render_display_ascii(display))
     return 0
+
+
+# Usage Output
+# ---------------------------------------------------------------------------
+def _print_usage() -> None:
+    print("Usage: python -m vball_scoreboard.ascii_demo [symbols]")
+    print("Example: python -m vball_scoreboard.ascii_demo 1234")
+    print('Example: python -m vball_scoreboard.ascii_demo "8-1 "')
 
 
 if __name__ == "__main__":

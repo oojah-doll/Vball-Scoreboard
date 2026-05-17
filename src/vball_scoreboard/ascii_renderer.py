@@ -15,6 +15,8 @@ from .segment_types import (
 ASCII_DIGIT_HEIGHT = 7
 
 
+# Public Rendering API
+# ---------------------------------------------------------------------------
 def render_digit_ascii(digit: DigitState) -> str:
     rows = [
         _draw_horizontal_segment(digit.is_segment_on(SEGMENT_TOP)),
@@ -91,6 +93,8 @@ def combine_digit_ascii_strings(digit_ascii_list, gap_columns: int = 2) -> str:
     return "\n".join(combined_rows)
 
 
+# Segment Drawing Primitives
+# ---------------------------------------------------------------------------
 def _draw_horizontal_segment(is_on: bool) -> str:
     if is_on:
         return " ***** "

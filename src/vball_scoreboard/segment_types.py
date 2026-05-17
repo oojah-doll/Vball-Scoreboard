@@ -33,11 +33,8 @@ SEGMENT_NAMES = (
 )
 
 
-def _validate_segment(segment_id: int) -> None:
-    if segment_id < 0 or segment_id >= SEGMENT_COUNT:
-        raise ValueError("segment_id must be in the range [0, 6]")
-
-
+# Core Types
+# ---------------------------------------------------------------------------
 class DigitState:
     """Stores the on/off state for one seven-segment digit."""
 
@@ -114,9 +111,17 @@ class DisplayState:
         for digit in self.digits:
             copied_display.digits.append(digit.copy())
         return copied_display
+
     """python debug printing"""
     def __repr__(self) -> str:
         return "DisplayState(%s)" % self.digits
+
+
+# Validation and Utilities
+# ---------------------------------------------------------------------------
+def _validate_segment(segment_id: int) -> None:
+    if segment_id < 0 or segment_id >= SEGMENT_COUNT:
+        raise ValueError("segment_id must be in the range [0, 6]")
 
 
 def clear_digit(digit: DigitState) -> None:

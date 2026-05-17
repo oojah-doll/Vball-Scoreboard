@@ -37,7 +37,7 @@ _WARNED_UNSUPPORTED_SYMBOLS: set[str] = set()
 _SUPPORTED_SYMBOLS: set[str] = set(supported_symbols())
 
 
-# Classes
+# Runtime State
 # ---------------------------------------------------------------------------
 class _SimulatedPixels:
     """Host-side fallback so code can run without CircuitPython hardware."""
@@ -75,7 +75,7 @@ class RuntimeState:
         self.step_index = 0
 
 
-# Main
+# Main Loop
 # ---------------------------------------------------------------------------
 def main() -> None:
     if RUN_MODE != MODE_CYCLE and RUN_MODE != MODE_CALIBRATION:
@@ -94,7 +94,7 @@ def main() -> None:
         _run_calibration_mode_step(state, driver, calibration_steps)
 
 
-# Helper Functions
+# Render Helpers
 # ---------------------------------------------------------------------------
 def _create_pixels():
     if board is None or neopixel is None:
@@ -123,7 +123,7 @@ def _render_value(display: DisplayState, value: str) -> None:
         symbols = symbols + (" ",) * (display.digit_count() - len(symbols))
     write_symbols(display, symbols[: display.digit_count()])
 
-# Mode logic
+# Render and Mode Steps
 # ---------------------------------------------------------------------------
 def _run_cycle_mode_step(
     state: RuntimeState,
